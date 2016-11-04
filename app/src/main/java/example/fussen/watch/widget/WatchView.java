@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -213,6 +214,7 @@ public class WatchView extends View {
                 mPaint.setColor(mColorLong);
                 lineWidth = 40;
                 mPaint.setTextSize(mTextSize);
+                mPaint.setTypeface(Typeface.DEFAULT_BOLD);
                 String text = ((i / 5) == 0 ? 12 : (i / 5)) + "";
                 Rect textBound = new Rect();
                 mPaint.getTextBounds(text, 0, text.length(), textBound);
